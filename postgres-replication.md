@@ -22,9 +22,9 @@ servers
   ---------
   
   
-cp /etc/postgresql/11/main/postgresql.conf /etc/postgresql/11/main/postgresql.conf.bak
+cp /etc/postgresql/10/main/postgresql.conf /etc/postgresql/10/main/postgresql.conf.bak
 
-vim  /etc/postgresql/11/main/postgresql.conf
+vim  /etc/postgresql/10/main/postgresql.conf
 
 
 Find the following line:
@@ -56,10 +56,10 @@ verify user
 
 SELECT * FROM pg_create_physical_replication_slot('replicator');
 
-cp /etc/postgresql/11/main/pg_hba.conf /etc/postgresql/11/main/pg_hba.conf
+cp /etc/postgresql/10/main/pg_hba.conf /etc/postgresql/10/main/pg_hba.conf
 
 
-vim  /etc/postgresql/11/main/pg_hba.conf
+vim  /etc/postgresql/10/main/pg_hba.conf
 
 add bwlow line end of the file
 
