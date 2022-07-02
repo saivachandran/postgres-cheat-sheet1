@@ -129,5 +129,60 @@ select pg_is_in_recovery();
 
 
 
+change asynchronization  replication into synchronization replication
 
+
+on master
+---------
+
+vim /etc/postgresql/10/main/postgresql.conf
+
+```
+synchronous_commit = on         # synchronization level;
+```
+
+```
+synchronous_standby_names =  'pgsql_0_node_0'   # standby servers that provide sync rep
+```
+
+
+```
+systemctl restart postgresql.service
+```
+
+
+on slave
+--------
+```
+vim recovery.conf  add below line 
+````
+application_name=pgsql_0_node_0
+
+
+```
+primary_conninfo = 'application_name=pgsql_0_node_0 user=replicator password=''admin@123'' channel_binding=prefer host=172.104.171.54 port=5432 sslmode=prefer sslcompression=0 sslsni=1 ssl_min_protocol_version=TLSv1.2 gssencmode=prefer krbsrvname=postgres target_session_attrs=any'
+```
+```
+systemctl restart postgresql.service
+```
+
+
+
+
+ref:
+
+https://www.howtoforge.com/how-to-setup-postgresql-streaming-replication-with-replication-slots-on-debian-10/
+
+https://www.youtube.com/watch?v=LhPAg583pKc
+
+https://severalnines.com/database-blog/converting-asynchronous-synchronous-replication-postgresql
+
+https://www.claudiokuenzler.com/blog/723/how-to-monitor-postgresql-replication
+postgres replication steps 10.21
+servers
+
+master 172.104.171.54
+
+slave 192.53.173.168
+on master
 
