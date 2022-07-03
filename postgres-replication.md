@@ -8,6 +8,8 @@ https://severalnines.com/database-blog/converting-asynchronous-synchronous-repli
 
 https://www.claudiokuenzler.com/blog/723/how-to-monitor-postgresql-replication
 
+https://www.postgresql.fastware.com/postgresql-insider-ha-str-rep
+
 postgres replication steps 10.21
 --------------------------------
 
