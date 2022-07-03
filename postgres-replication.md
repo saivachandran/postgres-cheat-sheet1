@@ -180,4 +180,46 @@ select pg_wal_replay_pause();
 select pg_wal_replay_resume();
 
 
+postgres failover test
+----------------------
+
+on slave
+-------
+
+su - postgres
+
+
+```
+touch /var/lib/postgresql/10/main/failover.trigger
+```
+
+wait some time now we can create database
+
+```
+sudo -u postgres psql -c "CREATE DATABASE test2"
+```
+
+now change server backto standby mode
+
+```
+mv /var/lib/postgresql/10/main/ /var/lib/postgresql/10/main.2.bak
+```
+
+```
+pg_basebackup -h 172.104.171.54 -D /var/lib/postgresql/10/main -U replicator -p 5432 -v -R -X stream   -c fast --slot=replicator
+```
+
+```
+chown -R postgres:postgres /var/lib/postgresql/10/main
+```
+
+```
+cp /var/lib/postgresql/10/main.2.bak/recovery.done /var/lib/postgresql/10/main/recovery.conf
+```
+
+```
+systemctl status postgresql.service
+````
+
+
 
