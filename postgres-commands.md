@@ -24,9 +24,9 @@ psql
 ```
 CREATE DATABASE sales;
 ```
-
+```
 SELECT datname FROM pg_database;
-
+```
 # create table
 --------------
 
