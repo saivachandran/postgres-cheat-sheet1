@@ -171,4 +171,13 @@ systemctl restart postgresql.service
 ```
 
 
+# pause replication on slave
+
+select pg_wal_replay_pause();
+
+# resume replication on slave
+
+select pg_wal_replay_resume();
+
+
 
