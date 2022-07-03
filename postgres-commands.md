@@ -19,6 +19,29 @@ sudo su - postgres
 psql
 ```
 
+# create database
+
+```
+CREATE DATABASE sales;
+```
+
+SELECT datname FROM pg_database;
+
+# create table
+--------------
+
+```
+CREATE TABLE authors (code char(5) NOT NULL, name varchar(40) NOT NULL, city varchar(40) NOT NULL, joined_on date NOT NULL, PRIMARY KEY (code));
+```
+```
+INSERT INTO authors VALUES(1,'Ravi Saive','Mumbai','2012-08-15');
+
+INSERT INTO authors VALUES(1,'Ravi Saive1','Mumbai1','2012-08-16');
+
+INSERT INTO authors VALUES(3,'Ravi Saive3','Mumbai3','2012-08-13');
+```
+
+
 ##### connect
 http://www.postgresql.org/docs/current/static/app-psql.html
 ```sql
