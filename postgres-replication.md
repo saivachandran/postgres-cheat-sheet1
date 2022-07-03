@@ -12,6 +12,8 @@ https://www.postgresql.fastware.com/postgresql-insider-ha-str-rep
 
 https://www.sqlpac.com/en/documents/postgresql-9.6-10-11-configuration-setup-streaming-replication-standby-ubuntu.html
 
+https://www3.ntu.edu.sg/home/ehchua/programming/sql/PostgreSQL_GetStarted.html
+
 postgres replication steps 10.21
 --------------------------------
 
