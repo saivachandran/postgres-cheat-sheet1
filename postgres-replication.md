@@ -168,21 +168,3 @@ systemctl restart postgresql.service
 
 
 
-
-ref:
-
-https://www.howtoforge.com/how-to-setup-postgresql-streaming-replication-with-replication-slots-on-debian-10/
-
-https://www.youtube.com/watch?v=LhPAg583pKc
-
-https://severalnines.com/database-blog/converting-asynchronous-synchronous-replication-postgresql
-
-https://www.claudiokuenzler.com/blog/723/how-to-monitor-postgresql-replication
-postgres replication steps 10.21
-servers
-
-master 172.104.171.54
-
-slave 192.53.173.168
-on master
-
