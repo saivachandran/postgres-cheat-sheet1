@@ -10,6 +10,8 @@ https://www.claudiokuenzler.com/blog/723/how-to-monitor-postgresql-replication
 
 https://www.postgresql.fastware.com/postgresql-insider-ha-str-rep
 
+https://www.sqlpac.com/en/documents/postgresql-9.6-10-11-configuration-setup-streaming-replication-standby-ubuntu.html
+
 postgres replication steps 10.21
 --------------------------------
 
