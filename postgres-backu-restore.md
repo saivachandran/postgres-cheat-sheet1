@@ -58,3 +58,12 @@
     **Backup:** `pg_dump -F c -h localhost -p 5432 -U postgres -d mydb > backup.dat`
 
     **Restore:** `pg_restore -F c -h localhost -p 5432 -U postgres -t my_table -d mydb backup.dat`
+
+
+# backup only user and roles with pass
+```
+	 pg_dumpall -h localhost -p 5432 -U postgres -v --globals-only > /tmp/useraccts.sql 
+```    
+# restore
+```
+psql -U postgres < /tmp/useraccts.sql 
